@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fefefe;
+}
+
+/************************************** NAVBAR STYLING *****************************************/
+header {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:black;
+	height: 75px;
+	border-bottom: 4px solid #ffd34e;
+    width: 100%;
+    height: 80px;
+    background: #11101b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+#logo {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #fefefe;
+    width: auto;
+    height: auto;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    color: #fefefe;
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.nav-bar ul li a.active {
+    color: #11101b;
+    background: #fefefe;
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #11101b;
+        transition: height 0.5s;
+    }
+
+    .nav-bar.active {
+        height: 160px; 
+    }
+
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin: 20px; 
+        font-size: 18px; 
+    }
+}
+/**************************************END OF NAVBAR STYLING *****************************************/
+.features-and-other-features {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px; 
+    margin: 10px;
+  }
+  
+  .left-section {
+    display: flex;
+    flex: 1; 
+    margin-right: 20px;
+  }
+  
+  .right-section {
+    flex: 1; 
+  }
+  
+  img {
+    /* max-width: 100%;  */
+    height: auto;
+    display: block; 
+    width: 253px;
+    margin: 13px;
+  }
+
+  .img-section1, .img-section2{
+    border: 2px solid #ffd34e;
+    margin: 3px;
+  }
+  
+  h1 {
+    margin-bottom: 10px; 
+  }
+  
+  ul {
+    list-style-type: none; 
+    padding-left: 0; 
+  }
+  
+  li {
+    margin-bottom: 5px; 
+  }
+  
+
+.home-heading {
+    text-align: center;
+    font-size: 36px;
+}
+
+.home-paragraph {
+    font-size: 18px;
+    text-align: center;
+}
+
+.features-and-other-features ul li{
+    list-style: decimal;
+}
+
+
+@media (max-width: 1200px) {
+    .features-and-other-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section, .right-section {
+        flex: 100%;
+        margin-right: 0;
+    }
+
+    img {
+        width: 100%;
+        max-width: 253px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-heading {
+        font-size: 28px;
+    }
+
+    .home-paragraph {
+        font-size: 16px;
+    }
+
+    .features-and-other-features {
+        padding: 10px;
+        margin: 5px;
+    }
+    
+    img {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-heading {
+        font-size: 24px;
+    }
+
+    .home-paragraph {
+        font-size: 14px;
+    }
+}
+
+
+/* Top button */
+#scrollUpBtn {
+    background-color: #ffd34e;;
+    position: fixed; 
+    height: 40px;
+    width: 40px;
+    bottom: 20px; 
+    right: 0; 
+    margin-right: 20px; 
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    color: white; 
+    cursor: pointer;
+    font-size: 18px; 
+}
+/* Top button */
+/* ********************************** FOOTER STYLING**************************************** */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+footer {
+    margin-top: auto;
+    background-color:  #ffd34e;
+    color: #000000;
+    text-align: center;
+    padding: 15px 0;
+    font-family: var(--common-font-o);
+}
+
+footer p {
+    margin: 0;
+}
+/* ********************************** END OF FOOTER STYLING**************************************** */

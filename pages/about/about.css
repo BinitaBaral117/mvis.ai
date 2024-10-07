@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fefefe;
+}
+
+/************************************** NAVBAR STYLING *****************************************/
+header {
+    background-color:black;
+	height: 75px;
+	border-bottom: 4px solid #ffd34e;
+    width: 100%;
+    height: 80px;
+    background: #11101b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+}
+
+.logo {
+    font-size: 24px; 
+    font-weight: bold;
+    color: #fefefe;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-bar ul {
+    display: flex;
+}
+
+.nav-bar ul li a {
+    color: #fefefe;
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+
+.nav-bar ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+.nav-bar ul li a.active {
+    color: #11101b;
+    background: #fefefe;
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        padding: 0 30px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #11101b;
+        transition: height 0.5s;
+    }
+
+    .nav-bar.active {
+        height: 160px; /* Adjusted height for better display */
+    }
+
+    .nav-bar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin: 20px; 
+        font-size: 18px; 
+    }
+}
+
+
+
+
+/* ABOUT STYLING */
+.container {
+    display: flex; 
+    justify-content: space-between;
+}
+
+.high-level-arch {
+    width: 50%; 
+    padding: 20px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.high-level-arch img {
+    height: 425px;
+    width: 100%; 
+    object-fit: cover; 
+}
+
+.about-paragraph, 
+.about-right-section-bottom-para {
+    margin: 10px 0; 
+    font-weight: 400;
+    font-size: large;
+    text-align: justify;
+    padding: 10px; 
+}
+
+.about-right-section {
+    background: rgb(244, 244, 227); 
+    width: 48%; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.about {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.about h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.high-level-arch div p {
+    text-decoration: underline;
+}
+
+.high-level-arch img, .about-right-section-image img {
+    width: 100%; 
+    border: 1px solid #333;
+    margin: auto;
+    padding: 20px; 
+}
+
+
+
+/* Top button */
+#scrollUpBtn {
+    background-color: #ffd34e;;
+    position: fixed; 
+    height: 40px;
+    width: 40px;
+    bottom: 20px; 
+    right: 0; 
+    margin-right: 20px; 
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 0);
+    color: white; 
+    cursor: pointer;
+    font-size: 18px; 
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .high-level-arch, .about-right-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .high-level-arch img {
+        height: auto;
+    }
+
+    .about h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .high-level-arch img {
+        height: 250px;
+    }
+
+    .about h1 {
+        font-size: 28px;
+    }
+
+    .about-paragraph, .about-right-section-bottom-para {
+        font-size: medium;
+    }
+
+    #scrollUpBtn {
+        height: 35px;
+        width: 35px;
+        font-size: 16px;
+    }
+}
+/* Top button */
+
+
+/* ********************************** FOOTER STYLING**************************************** */
+
+footer {
+    margin-top: auto;
+    background-color:  #ffd34e;
+    color: #000000;
+    text-align: center;
+    padding: 15px 0;
+    font-family: var(--common-font-o);
+}
+
+footer p {
+    margin: 0;
+}
+
+/* ********************************** END OF FOOTER STYLING**************************************** */
+
